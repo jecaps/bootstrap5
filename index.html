@@ -13,6 +13,9 @@
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
+  <!-- Maps -->
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
 
   <title>Frontend Bootcamp</title>
 </head>
@@ -352,6 +355,9 @@
             </li>
           </ul>
         </div>
+        <div class="col-md">
+          <div id="map"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -360,6 +366,18 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
     crossorigin="anonymous"></script>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiamVya2FueiIsImEiOiJja3Vtcnh4Nm4wbW51MzJwZjA4MHMwNHhoIn0.tOuECp6ob2cRuiRe6fMBtw';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-71.060982, 42.35725],
+      zoom: 18,
+    });
+  </script>
 </body>
 
 </html>
